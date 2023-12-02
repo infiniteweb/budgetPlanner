@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./MonthView.css";
-import IncomeBox from "../incomeBox/IncomeBox";
+import IncomeBox from "./IncomeBox/IncomeBox";
+import TopBanner from "./TopBanner/TopBanner";
 
 export default function MonthView() {
   const [incomeSalary, setIncomeSalary] = useState("");
@@ -37,23 +38,7 @@ export default function MonthView() {
   return (
     <>
       <div className="container-fluid text-center d-flex flex-column vh-100">
-        <div className="row month-box-row align-items-center">
-          <div className="col-4  p-3 d-flex flex-column">
-            <h4 id="date-year">2023</h4>
-            <div className="d-flex justify-content-around mt-2">
-              <i className="fa-solid fa-arrow-left fa-lg"></i>
-
-              <i className="fa-solid fa-arrow-right fa-lg"></i>
-            </div>
-          </div>
-          <div className="col-4  p-3 ">
-            <h3 id="app-title">Budget planner</h3>
-          </div>
-          <div className="col-4 p-3 d-flex flex-column ">
-            <h5 id="profit-loss">profit/loss</h5>
-            <h4 id="profit-loss">{totalIncome}</h4>
-          </div>
-        </div>
+        <TopBanner totalIncome={totalIncome} />
         {/*IncomeBox */}
         <div className="row">
           <div className="d-flex flex-wrap">
@@ -69,8 +54,8 @@ export default function MonthView() {
                   handleIncomeBankBalanceChange={handleIncomeBankBalanceChange}
                 />
               </div>
-              <div className="col ">
-                <h4>whats going out?</h4>
+              <div className="col d-flex justify-content-start ms-3">
+                <h4  id="outgoing-title">whats going out?</h4>
               </div>
             </div>
             <div className="col ">

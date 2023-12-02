@@ -1,10 +1,14 @@
-* {
-  padding: 0;
-  margin: 0;
-}
+
 
 body {
   background-color: aqua;
+}
+
+#outgoing-title{
+  font-family: "Bebas Neue", sans-serif;
+  color: rgb(226, 43, 98);
+  font-weight: 400;
+  font-size: 3.5vw;
 }
 
 .div1 {
@@ -19,27 +23,16 @@ body {
   background-color: yellow;
 }
 
-
-
-
-/* IncomeBox */
-
+@media (max-width: 700px) {
+  #outgoing-title{
+  
+    font-size: 4vw;
+  }
+}
 
 @media (max-width: 450px) {
-  #app-title {
-    font-size: 5vw;
-  }
-
-  #date-year {
-    font-size: 3vw;
-  }
-
-  #profit-loss {
-    font-size: 3vw;
-  }
-
-  i.fa-arrow-left,
-  i.fa-arrow-right {
-    font-size: inherit; /* Reset font size for small screens */
+  #outgoing-title{
+  
+    font-size: 7vw;
   }
 }

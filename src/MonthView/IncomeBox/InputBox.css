@@ -1,7 +1,3 @@
-* {
-  padding: 0;
-  margin: 0;
-}
 
 .income-input-box {
     padding: 7px;
@@ -13,7 +9,7 @@
   
   .income-label {
     text-align: start;
-    color: blueviolet;
+    color:  rgb(226, 43, 98);
     font-weight: bold;
   }
   
@@ -25,7 +21,7 @@
   }
   
   .input-pound {
-    color: blueviolet;
+    color:  rgb(226, 43, 98);
     font-size: larger;
   
   }
