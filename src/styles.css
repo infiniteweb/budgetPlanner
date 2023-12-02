@@ -1,0 +1,73 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: aqua;
+}
+
+.div1 {
+  background-color: red;
+}
+
+.div2 {
+  background-color: green;
+}
+
+.div3 {
+  background-color: yellow;
+}
+
+.month-box-row {
+  padding: 0px 9px;
+}
+
+.month-box-col {
+  padding: 3px;
+}
+
+.month-box {
+  background-color: white;
+  height: 100%;
+
+  border-style: solid;
+  border-color: rgb(140, 140, 140);
+  border-radius: 15px;
+  border-width: thick;
+}
+
+.month-name {
+  color: rgb(78, 2, 2);
+  margin-top: 5px;
+}
+
+.month-name-underline {
+  color: rgb(51, 49, 49);
+  width: 80%;
+  align-self: center;
+  margin: 0px;
+  border: 1.5px solid;
+}
+
+/* IncomeBox */
+
+
+@media (max-width: 450px) {
+  #app-title {
+    font-size: 5vw;
+  }
+
+  #date-year {
+    font-size: 3vw;
+  }
+
+  #profit-loss {
+    font-size: 3vw;
+  }
+
+  i.fa-arrow-left,
+  i.fa-arrow-right {
+    font-size: inherit; /* Reset font size for small screens */
+  }
+}

@@ -1,0 +1,27 @@
+.income-input-box {
+    padding: 7px;
+    margin: 5px;
+    border-radius: 13px;
+    background-color: white;
+    width: 180px;
+  }
+  
+  .income-label {
+    text-align: start;
+    color: blueviolet;
+    font-weight: bold;
+  }
+  
+  .input-input {
+    outline: none;
+    border: none;
+      width:160px;
+  
+  }
+  
+  .input-pound {
+    color: blueviolet;
+    font-size: larger;
+  
+  }
+  
