@@ -1,3 +1,8 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
 .income-input-box {
     padding: 7px;
     margin: 5px;

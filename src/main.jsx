@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./Root.jsx";
-import MonthView from "./monthView.jsx";
+import MonthView from "./MonthView/MonthView.jsx";
 
 const router = createBrowserRouter([
   {

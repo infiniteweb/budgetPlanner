@@ -1,6 +1,6 @@
 import { useState } from "react";
-import "./styles.css";
-import IncomeBox from "./incomeBox/IncomeBox";
+import "./MonthView.css";
+import IncomeBox from "../incomeBox/IncomeBox";
 
 export default function MonthView() {
   const [incomeSalary, setIncomeSalary] = useState("");
@@ -56,19 +56,26 @@ export default function MonthView() {
         </div>
         {/*IncomeBox */}
         <div className="row">
-          <div className="col-sm-8 d-flex flex-column">
-            <IncomeBox
-              incomeSalary={incomeSalary}
-              incomeExtras={incomeExtras}
-              incomeBankBalance={incomeBankBalance}
-              totalIncome={totalIncome}
-              handleIncomeSalaryChange={handleIncomeSalaryChange}
-              handleIncomeExtrasChange={handleIncomeExtrasChange}
-              handleIncomeBankBalanceChange={handleIncomeBankBalanceChange}
-            />
-          </div>
-          <div className="col-sm-4 ">
-            <div className="div2">hi</div>
+          <div className="d-flex flex-wrap">
+            <div className="d-flex flex-column">
+              <div className="col d-flex flex-column">
+                <IncomeBox
+                  incomeSalary={incomeSalary}
+                  incomeExtras={incomeExtras}
+                  incomeBankBalance={incomeBankBalance}
+                  totalIncome={totalIncome}
+                  handleIncomeSalaryChange={handleIncomeSalaryChange}
+                  handleIncomeExtrasChange={handleIncomeExtrasChange}
+                  handleIncomeBankBalanceChange={handleIncomeBankBalanceChange}
+                />
+              </div>
+              <div className="col ">
+                <h4>whats going out?</h4>
+              </div>
+            </div>
+            <div className="col ">
+              <div className="div2">hi</div>
+            </div>
           </div>
         </div>
         <div className="row">

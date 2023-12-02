@@ -1,0 +1,36 @@
+* {
+    padding: 0;
+    margin: 0;
+  }
+
+.month-box-row {
+    padding: 0px 9px;
+  }
+  
+  .month-box-col {
+    padding: 3px;
+  }
+  
+  .month-box {
+    background-color: white;
+    height: 100%;
+  
+    border-style: solid;
+    border-color: rgb(140, 140, 140);
+    border-radius: 15px;
+    border-width: thick;
+  }
+
+
+  .month-name {
+    color: rgb(78, 2, 2);
+    margin-top: 5px;
+  }
+  
+  .month-name-underline {
+    color: rgb(51, 49, 49);
+    width: 80%;
+    align-self: center;
+    margin: 0px;
+    border: 1.5px solid;
+  }
