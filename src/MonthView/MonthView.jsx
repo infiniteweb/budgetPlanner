@@ -55,11 +55,14 @@ export default function MonthView() {
                 />
               </div>
               <div className="col d-flex justify-content-start ms-3">
-                <h4  id="outgoing-title">whats going out?</h4>
+                <h4 id="outgoing-title">What&apos;s going out?</h4>
               </div>
             </div>
-            <div className="col ">
-              <div className="div2">hi</div>
+            <div className="col d-flex flex-column ">
+              <div className="d-flex" id="day-to-day-costs-box">
+                <h4 id="day-to-day-costs-header">Day to day costs... </h4>
+                <button className="align-self-start ms-auto add-new-btn">+</button>
+              </div>
             </div>
           </div>
         </div>
