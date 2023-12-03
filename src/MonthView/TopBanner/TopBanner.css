@@ -6,16 +6,16 @@ h4 {
   font-family: "Bebas Neue", sans-serif;
   color: rgb(226, 43, 98);
   font-weight: 400;
-  font-size: 5vw;
+  font-size: 2.8vw;
 }
 
 #date-year {
-  font-size: 2.5vw;
+  font-size: 1.5vw;
   color: rgb(226, 43, 98);
 }
 
 #profit-loss {
-  font-size: 2.5vw;
+  font-size: 2vw;
   color: rgb(226, 43, 98);
 }
 
@@ -30,6 +30,20 @@ h4 {
   font-size: 1.5vw;
   color: rgb(226, 43, 98);
 }
+
+i.fa-arrow-left{
+  margin-right: 40px;
+}
+
+i.fa-arrow-right{
+  margin-left: 40px;
+}
+
+/* @media (min-width: 992px){
+  .app-title{
+  margin-right: 600px;
+  }
+} */
 
 @media (max-width: 700px) {
   .app-title {

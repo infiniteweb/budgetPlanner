@@ -1,12 +1,28 @@
+
+
 #income-box {
   background-color: rgb(226, 43, 98);
   border-radius: 13px;
-  padding: 10px;
-  margin: 10px;
+  padding: 5px;
+  margin: 5px;
 }
 
 #income-header {
   text-align: start;
   color: white;
-  padding: 5px;
+  padding: 0px 0px 0px 7px;
+  font-size: 1.7vw;
 }
+
+@media (max-width: 450px){
+  #income-header{
+    font-size: 5vw;
+  }
+}
+
+@media (max-width: 700px){
+  #income-header{
+    font-size: 3.5vw;
+  }
+}
+

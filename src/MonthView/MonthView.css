@@ -6,34 +6,126 @@ body {
   font-family: "Roboto", sans-serif;
   color: rgb(226, 43, 98);
 
-  font-size: 3.5vw;
+  font-size: 2.2vw;
+}
+
+.box-header {
+  font-family: "Roboto", sans-serif;
+  color: rgb(226, 43, 98);
+  margin: 10px 0px 0px 10px;
+}
+
+.item-label {
+  outline: none;
+  border: none;
+  width: 180px;
+  margin: 5px 15px 0px 10px;
+}
+
+.item-pound {
+  margin-top: 6px;
+}
+
+.money-input {
+  outline: none;
+  border: none;
+  margin-top: 6px;
+  width: 88px;
+}
+
+@media (max-width: 400px) {
+  .item-label {
+    width: 120px;
+  }
 }
 
 /* day to day costs box */
 
 #day-to-day-costs-box {
   background-color: white;
-  height: 100%;
+  height: 200px;
   border-style: solid;
   border-color: rgb(206, 202, 202);
   border-radius: 15px;
   border-width: thick;
-  margin: 10px 0px;
-  min-width: 290px;
+  margin: 3px 0px;
+  min-width: 310px;
 }
 
 #day-to-day-costs-header {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   color: rgb(226, 43, 98);
   margin: 10px 0px 0px 10px;
 }
 
-.add-new-btn{
+.add-new-btn {
   color: rgb(226, 43, 98);
   background-color: white;
   border: 0 none;
   font-size: 2vw;
   margin: 0px 10px 0px 0px;
+}
+
+/* essentials box */
+
+#essentials-box {
+  background-color: white;
+  height: 410px;
+  border-style: solid;
+  border-color: rgb(206, 202, 202);
+  border-radius: 15px;
+  border-width: thick;
+  margin: 5px 0px;
+  min-width: 290px;
+}
+
+#essentials-items-box{
+  max-height: 370px;
+  overflow: scroll;
+}
+
+#essentials-add-new{
+  margin-left: 65px;
+}
+
+
+.savings-input {
+  outline: none;
+  border: none;
+  margin: 6px 5px 0px 0px;
+}
+
+.savings-textarea {
+  margin: 5px;
+  border: none;
+  resize: none;
+  outline: none;
+}
+
+/* debts box */
+
+#debts-box {
+  background-color: white;
+  height: 410px;
+  border-style: solid;
+  border-color: rgb(206, 202, 202);
+  border-radius: 15px;
+  border-width: thick;
+  margin: 5px 0px;
+  min-width: 270px;
+}
+
+/*Action plan box*/
+
+#action-plan-box {
+  background-color: white;
+  height: 357px;
+  border-style: solid;
+  border-color: rgb(206, 202, 202);
+  border-radius: 15px;
+  border-width: thick;
+  margin: 5px 0px;
+  min-width: 310px;
 }
 
 .div1 {

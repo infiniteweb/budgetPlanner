@@ -1,6 +1,6 @@
 
 .income-input-box {
-    padding: 7px;
+    padding: 5px;
     margin: 5px;
     border-radius: 13px;
     background-color: white;
@@ -22,7 +22,7 @@
   
   .input-pound {
     color:  rgb(226, 43, 98);
-    font-size: larger;
-  
+    font-size: 1.3vw;
+    margin-bottom: 1px;
   }
   
