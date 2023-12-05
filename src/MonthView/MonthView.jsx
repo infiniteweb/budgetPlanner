@@ -1,11 +1,20 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./MonthView.css";
 import IncomeBox from "./IncomeBox/IncomeBox";
 import TopBanner from "./TopBanner/TopBanner";
 
 export default function MonthView() {
   /* INCOME BOX */
-  const [incomeSalary, setIncomeSalary] = useState("");
+  const [incomeSalary, setIncomeSalary] = useState(() => {
+    const localValue = localStorage.getItem("income");
+    const income = JSON.parse(localValue);
+    console.log(income);
+    return income.incomeSalary == null ?  "" :  income.incomeSalary
+  });
+
+  const [incomeExtras, setIncomeExtras] = useState("");
+  const [incomeBankBalance, setIncomeBankBalance] = useState("");
+
   const handleIncomeSalaryChange = (e) => {
     const re = /^[0-9\b]+$/;
     if (e.target.value === "" || re.test(e.target.value)) {
@@ -13,7 +22,6 @@ export default function MonthView() {
     }
   };
 
-  const [incomeExtras, setIncomeExtras] = useState("");
   const handleIncomeExtrasChange = (e) => {
     const re = /^[0-9\b]+$/;
     const value = e.target.value;
@@ -22,7 +30,6 @@ export default function MonthView() {
     }
   };
 
-  const [incomeBankBalance, setIncomeBankBalance] = useState("");
   const handleIncomeBankBalanceChange = (e) => {
     const re = /^[0-9\b]+$/;
     const value = e.target.value;
@@ -36,10 +43,24 @@ export default function MonthView() {
     (isNaN(parseInt(incomeExtras)) ? "" : parseInt(incomeExtras)) +
     (isNaN(parseInt(incomeBankBalance)) ? "" : parseInt(incomeBankBalance));
 
+  /* USE EFFECT */
+  useEffect(() => {
+    const userIncome = {
+      incomeSalary,
+      incomeExtras,
+      incomeBankBalance,
+      totalIncome,
+    };
+
+    localStorage.setItem("income", JSON.stringify(incomeSalary));
+    localStorage.setItem("income", JSON.stringify(userIncome));
+  }, [incomeSalary, incomeExtras, incomeBankBalance, totalIncome]);
+
   /* ESSENTIALS BOX */
   /* ITEM INPUT BOX */
   /* ITEM INPUT ARRAY */
-  const essentialItems = [
+
+  const essentialItemList = [
     { id: 0, header: "Council tax", cost: 0 },
     { id: 1, header: "Housing costs", cost: 0 },
     { id: 2, header: "Gas/Electric", cost: 0 },
@@ -54,6 +75,20 @@ export default function MonthView() {
     { id: 11, header: "Food", cost: 0 },
     { id: 12, header: "Savings", cost: 0 },
   ];
+
+  const [essentialItems, setEssentialItems] = useState(essentialItemList);
+
+  const handleEssentialItemHeaderChange = (e) => {
+    const newHeader = e.target.value;
+    const changeHeader = essentialItems.map((header) => {
+      if (essentialItems.header !== newHeader) {
+        return header;
+      } else {
+        return newHeader;
+      }
+    });
+    setEssentialItems(changeHeader);
+  };
 
   return (
     <>
@@ -82,15 +117,18 @@ export default function MonthView() {
                     <div className="d-flex flex-column">
                       <div className="d-flex justify-content-start">
                         <h4 className="box-header">Essentials... </h4>
-                        <button className="add-new-btn" id="essentials-add-new">+</button>
+                        <button className="add-new-btn" id="essentials-add-new">
+                          +
+                        </button>
                       </div>
                       <div id="essentials-items-box">
-                        {essentialItems.map((item) => (
+                        {essentialItemList.map((item) => (
                           <div key={item.id} className="d-flex">
                             <input
                               className="item-label"
                               type="text"
                               defaultValue={item.header}
+                              onChange={handleEssentialItemHeaderChange}
                             />
                             <span className="item-pound">£</span>
                             <input
