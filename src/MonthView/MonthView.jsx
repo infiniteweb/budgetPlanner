@@ -2,18 +2,25 @@ import { useState, useEffect } from "react";
 import "./MonthView.css";
 import IncomeBox from "./IncomeBox/IncomeBox";
 import TopBanner from "./TopBanner/TopBanner";
+import EssentialBox from "./EssentialBox/EssentialBox";
 
 export default function MonthView() {
   /* INCOME BOX */
-  const [incomeSalary, setIncomeSalary] = useState(() => {
-    const localValue = localStorage.getItem("income");
-    const income = JSON.parse(localValue);
-    console.log(income);
-    return income.incomeSalary == null ?  "" :  income.incomeSalary
-  });
 
-  const [incomeExtras, setIncomeExtras] = useState("");
-  const [incomeBankBalance, setIncomeBankBalance] = useState("");
+  const localValue = localStorage.getItem("income");
+  const income = JSON.parse(localValue);
+
+  const [incomeSalary, setIncomeSalary] = useState(
+    income.incomeSalary == null ? "" : income.incomeSalary
+  );
+
+  const [incomeExtras, setIncomeExtras] = useState(
+    income.incomeExtras == null ? "" : income.incomeExtras
+  );
+
+  const [incomeBankBalance, setIncomeBankBalance] = useState(
+    income.incomeBankBalance == null ? "" : income.incomeBankBalance
+  );
 
   const handleIncomeSalaryChange = (e) => {
     const re = /^[0-9\b]+$/;
@@ -52,7 +59,6 @@ export default function MonthView() {
       totalIncome,
     };
 
-    localStorage.setItem("income", JSON.stringify(incomeSalary));
     localStorage.setItem("income", JSON.stringify(userIncome));
   }, [incomeSalary, incomeExtras, incomeBankBalance, totalIncome]);
 
@@ -64,7 +70,6 @@ export default function MonthView() {
     { id: 0, header: "Council tax", cost: 0 },
     { id: 1, header: "Housing costs", cost: 0 },
     { id: 2, header: "Gas/Electric", cost: 0 },
-
     { id: 4, header: "Water", cost: 0 },
     { id: 5, header: "Mobile phone", cost: 0 },
     { id: 6, header: "Broadband", cost: 0 },
@@ -112,40 +117,9 @@ export default function MonthView() {
             <div className="row g-2">
               <div className="col-lg-8 ">
                 {/*ESSENTIAL BOX BEGIN */}
-                <div id="essentials-box">
-                  <div className="d-flex flex-wrap">
-                    <div className="d-flex flex-column">
-                      <div className="d-flex justify-content-start">
-                        <h4 className="box-header">Essentials... </h4>
-                        <button className="add-new-btn" id="essentials-add-new">
-                          +
-                        </button>
-                      </div>
-                      <div id="essentials-items-box">
-                        {essentialItemList.map((item) => (
-                          <div key={item.id} className="d-flex">
-                            <input
-                              className="item-label"
-                              type="text"
-                              defaultValue={item.header}
-                              onChange={handleEssentialItemHeaderChange}
-                            />
-                            <span className="item-pound">£</span>
-                            <input
-                              className="money-input"
-                              type="text"
-                              defaultValue={item.cost}
-                            />
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                    <div className="d-flex flex-column flex-fill">
-                      <h4 className="box-header">Savings ideas? </h4>
-                      <textarea className="savings-textarea" />
-                    </div>
-                  </div>
-                </div>
+                <EssentialBox 
+                itemList = {essentialItemList}
+                handleItemHeaderChange={handleEssentialItemHeaderChange}/>
               </div>
               <div className="col-lg-4">
                 <div className="d-flex" id="debts-box">

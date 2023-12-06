@@ -66,41 +66,7 @@ body {
   margin: 0px 10px 0px 0px;
 }
 
-/* essentials box */
 
-#essentials-box {
-  background-color: white;
-  height: 410px;
-  border-style: solid;
-  border-color: rgb(206, 202, 202);
-  border-radius: 15px;
-  border-width: thick;
-  margin: 5px 0px;
-  min-width: 290px;
-}
-
-#essentials-items-box{
-  max-height: 370px;
-  overflow: scroll;
-}
-
-#essentials-add-new{
-  margin-left: 65px;
-}
-
-
-.savings-input {
-  outline: none;
-  border: none;
-  margin: 6px 5px 0px 0px;
-}
-
-.savings-textarea {
-  margin: 5px;
-  border: none;
-  resize: none;
-  outline: none;
-}
 
 /* debts box */
 
