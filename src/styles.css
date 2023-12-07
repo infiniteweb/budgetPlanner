@@ -1,0 +1,378 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/*YEAR VIEW*/
+
+.month-box-row {
+  padding: 0px 9px;
+}
+
+.month-box-col {
+  padding: 3px;
+}
+
+.month-box {
+  background-color: white;
+  height: 100%;
+
+  border-style: solid;
+  border-color: rgb(140, 140, 140);
+  border-radius: 15px;
+  border-width: thick;
+}
+
+.month-name {
+  color: rgb(78, 2, 2);
+  margin-top: 5px;
+}
+
+.month-name-underline {
+  color: rgb(51, 49, 49);
+  width: 80%;
+  align-self: center;
+  margin: 0px;
+  border: 1.5px solid;
+}
+
+/*MONTH VIEW*/
+
+body {
+  background-color: rgb(235, 223, 223);
+}
+
+#outgoing-title {
+  font-family: "Roboto", sans-serif;
+  color: rgb(226, 43, 98);
+
+  font-size: 2.2vw;
+}
+
+.box-header {
+  font-family: "Roboto", sans-serif;
+  color: rgb(226, 43, 98);
+  margin: 10px 0px 0px 5px;
+  text-align: start;
+}
+
+.item-label {
+  outline: none;
+  border: none;
+
+  margin: 5px 15px 0px 10px;
+}
+
+.item-pound {
+  margin-top: 6px;
+}
+
+.money-input {
+  outline: none;
+  border: none;
+  margin-top: 6px;
+  width: 70px;
+}
+
+/* day to day costs box */
+
+#day-to-day-costs-box {
+  background-color: white;
+  height: 200px;
+  border-style: solid;
+  border-color: rgb(206, 202, 202);
+  border-radius: 15px;
+  border-width: thick;
+  margin: 3px 0px;
+  min-width: 310px;
+}
+
+#day-to-day-costs-header {
+  font-family: "Roboto", sans-serif;
+  color: rgb(226, 43, 98);
+  margin: 10px 0px 0px 10px;
+}
+
+.add-new-btn {
+  color: rgb(226, 43, 98);
+  background-color: white;
+  border: 0 none;
+  font-size: 2vw;
+  margin: 0px 10px 0px 0px;
+  text-align: start;
+  width: 70px;
+}
+
+/* debts box */
+
+#debts-box {
+  background-color: white;
+  height: 410px;
+  border-style: solid;
+  border-color: rgb(206, 202, 202);
+  border-radius: 15px;
+  border-width: thick;
+  margin: 5px 0px;
+  min-width: 270px;
+}
+
+/*Action plan box*/
+
+#action-plan-box {
+  background-color: white;
+  height: 357px;
+  border-style: solid;
+  border-color: rgb(206, 202, 202);
+  border-radius: 15px;
+  border-width: thick;
+  margin: 5px 0px;
+  min-width: 310px;
+}
+
+.div1 {
+  background-color: red;
+}
+
+.div2 {
+  background-color: green;
+}
+
+.div3 {
+  background-color: yellow;
+}
+
+@media (max-width: 700px) {
+  #outgoing-title {
+    font-size: 4vw;
+  }
+}
+
+@media (max-width: 450px) {
+  #outgoing-title {
+    font-size: 7vw;
+  }
+}
+
+/*TOP BANNER*/
+
+h4 {
+  margin: 0;
+}
+
+.app-title {
+  font-family: "Bebas Neue", sans-serif;
+  color: rgb(226, 43, 98);
+  font-weight: 400;
+  font-size: 2.8vw;
+}
+
+#date-year {
+  font-size: 1.5vw;
+  color: rgb(226, 43, 98);
+}
+
+#profit-loss {
+  font-size: 2vw;
+  color: rgb(226, 43, 98);
+}
+
+#profit-loss-total {
+  font-size: 1.5vw;
+  overflow-x: scroll;
+  max-width: 240px;
+  padding: 0;
+}
+
+#total-pound {
+  font-size: 1.5vw;
+  color: rgb(226, 43, 98);
+}
+
+i.fa-arrow-left {
+  margin-right: 40px;
+}
+
+i.fa-arrow-right {
+  margin-left: 40px;
+}
+
+/* @media (min-width: 992px){
+  .app-title{
+  margin-right: 600px;
+  }
+} */
+
+@media (max-width: 700px) {
+  .app-title {
+    font-size: 6vw;
+  }
+
+  #date-year {
+    font-size: 3.5vw;
+  }
+
+  #profit-loss {
+    font-size: 3.5vw;
+  }
+
+  #profit-loss-total {
+    font-size: 3.5vw;
+  }
+
+  i.fa-arrow-left,
+  i.fa-arrow-right {
+    font-size: inherit; /* Reset font size for small screens */
+  }
+}
+
+@media (max-width: 450px) {
+  .app-title {
+    font-size: 9vw;
+  }
+
+  #date-year {
+    font-size: 6vw;
+  }
+
+  #profit-loss {
+    font-size: 7vw;
+  }
+
+  #profit-loss-total {
+    font-size: 4vw;
+  }
+
+  i.fa-arrow-left,
+  i.fa-arrow-right {
+    font-size: inherit; /* Reset font size for small screens */
+  }
+}
+
+/* INCOME BOX */
+
+#income-box {
+  background-color: rgb(226, 43, 98);
+  border-radius: 13px;
+  padding: 5px;
+  margin: 5px;
+}
+
+#income-header {
+  text-align: start;
+  color: white;
+  padding: 0px 0px 0px 7px;
+  font-size: 1.7vw;
+}
+
+@media (max-width: 450px) {
+  #income-header {
+    font-size: 5vw;
+  }
+}
+
+@media (max-width: 700px) {
+  #income-header {
+    font-size: 3.5vw;
+  }
+}
+
+/*INPUT BOX */
+
+.income-input-box {
+  padding: 5px;
+  margin: 5px;
+  border-radius: 13px;
+  background-color: white;
+  width: 160px;
+}
+
+.income-label {
+  text-align: start;
+  color: rgb(226, 43, 98);
+  font-weight: bold;
+}
+
+.input-input {
+  outline: none;
+  border: none;
+  width: 140px;
+}
+
+.input-pound {
+  color: rgb(226, 43, 98);
+ align-self:baseline;
+  font-size: 16px;
+}
+
+/* essentials box */
+
+#essentials-box {
+  background-color: white;
+  height: 410px;
+  border-style: solid;
+  border-color: rgb(206, 202, 202);
+  border-radius: 15px;
+  border-width: thick;
+  margin: 5px 0px;
+  /* min-width: 290px; */
+}
+
+#essentials-items-box {
+  max-height: 310px;
+  overflow: scroll;
+}
+
+.essentials-item-label {
+  outline: none;
+  border: none;
+
+  margin: 5px 15px 0px 10px;
+}
+
+#essential-items-total {
+ border: 9px;
+ border-style: dashed;
+}
+
+#essentials-add-new {
+  font-size: 25px;
+}
+
+.savings-input {
+  outline: none;
+  border: none;
+  margin: 6px 5px 0px 0px;
+}
+
+@media (min-width: 920px) {
+    .income-input-box{
+        width: 220px;
+    }
+
+    .input-input {
+        outline: none;
+        border: none;
+        width: 190px;
+      }
+  }
+
+/*SAVINGS IDEAS BOX */
+
+#savings-ideas-box {
+  background-color: white;
+  height: 410px;
+  border-style: solid;
+  border-color: rgb(206, 202, 202);
+  border-radius: 15px;
+  border-width: thick;
+  margin: 5px 0px;
+}
+
+
+.savings-textarea {
+    margin: 5px;
+    border: none;
+    resize: none;
+    outline: none;
+    min-height: 350px;
+  }

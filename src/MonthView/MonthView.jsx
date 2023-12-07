@@ -115,11 +115,20 @@ export default function MonthView() {
               <h4 id="outgoing-title">What&apos;s going out?</h4>
             </div>
             <div className="row g-2">
-              <div className="col-lg-8 ">
+              <div className="col-lg-4 ">
                 {/*ESSENTIAL BOX BEGIN */}
-                <EssentialBox 
-                itemList = {essentialItemList}
-                handleItemHeaderChange={handleEssentialItemHeaderChange}/>
+                <EssentialBox
+                  itemList={essentialItemList}
+                  handleItemHeaderChange={handleEssentialItemHeaderChange}
+                />
+              </div>
+              <div className="col-lg-4 ">
+                <div id="savings-ideas-box">
+                  <div className="d-flex flex-column flex-fill responsive ">
+                    <h4 className="box-header">Savings ideas? </h4>
+                    <textarea className="savings-textarea h-100" />
+                  </div>
+                </div>
               </div>
               <div className="col-lg-4">
                 <div className="d-flex" id="debts-box">
