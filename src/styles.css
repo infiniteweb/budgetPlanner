@@ -330,8 +330,10 @@ i.fa-arrow-right {
 }
 
 #essential-items-total {
- border: 9px;
- border-style: dashed;
+    border-top-style: solid;
+    border-color: rgb(206, 202, 202);
+    border-width: thick;
+ 
 }
 
 #essentials-add-new {
